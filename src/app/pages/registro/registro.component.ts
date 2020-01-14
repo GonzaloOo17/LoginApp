@@ -17,22 +17,10 @@ export class RegistroComponent implements OnInit {
     private router : Router) { }
 
   ngOnInit() {
-    this.usuario = new UsuarioModel();
-
-    this.usuario.email= "gonzalomarincuesta@gmail.com";
+   
 
    }
 
-    onSubmit( form : NgForm){
-      if(form.invalid){
-        return;
-      }  
-      console.log(form);
-      this.loginService.register(this.usuario)
-        .subscribe(data=>{
-          this.router.navigateByUrl('/home');
-        });
-      
-    }
+  
 
 }

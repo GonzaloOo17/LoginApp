@@ -22,16 +22,6 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  login(form:NgForm){
-    console.log(form);
-    console.log(form.controls.email)
-    this.loginService.login(this.usuario)
-    .subscribe(data=>{
-      console.log(data);
-      this.router.navigateByUrl('/home');
-    },(err)=>{
-      console.log(err.error.error.message);
-    });
-  }
+
 
 }
